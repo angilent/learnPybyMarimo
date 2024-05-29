@@ -1,10 +1,10 @@
 import marimo
 
-__generated_with = "0.6.8"
+__generated_with = "0.6.10"
 app = marimo.App()
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(
         r"""
@@ -22,11 +22,7 @@ def __(mo):
 
 @app.cell
 def __(mo):
-    mo.md(
-        r"""
-        - You are at the zoo and you write down a list of some animals you see:
-        """
-    )
+    mo.md(r"## You are at the zoo and you write down a list of some animals you see:")
     return
 
 
@@ -39,11 +35,7 @@ def __():
 
 @app.cell
 def __(mo):
-    mo.md(
-        r"""
-        - Then you print out the animals one by one:
-        """
-    )
+    mo.md(r"## Then you print out the animals one by one:")
     return
 
 
@@ -57,13 +49,9 @@ def __(animals):
     return i,
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
-    mo.md(
-        r"""
-        - You really wanted to see a penguin: 
-        """
-    )
+    mo.md(r"## You really wanted to see a penguin:")
     return
 
 
@@ -73,30 +61,25 @@ def __():
     return wanted_to_see,
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
-    mo.md(
-        r"""
-        - Once home, you tell your friend the animals you saw, specifying which one you really wanted to see:
-        """
-    )
+    mo.md(r"## Once home, you tell your friend the animals you saw, specifying which one you really wanted to see:")
     return
 
 
 @app.cell
 def __(animals, wanted_to_see):
     # for each position in the list
-    for i in range (0, len(animals)):
+    for i2 in range (0, len(animals)):
         # if the current animal is what you really wanted to see
-        if animals[i] == wanted_to_see:
+        if animals[i2] == wanted_to_see:
             # print out that that's the animal you really wanted to see
-            print ("I saw a " + animals[i] + " and I really wanted to see it!")
+            print ("I saw a " + animals[i2] + " and I really wanted to see it!")
         # if the current animal is not what you really wanted to see
         else:
             # just print out that you saw it
-            print ("I saw a " + animals[i])
-        
-    return i,
+            print ("I saw a " + animals[i2])
+    return i2,
 
 
 @app.cell
@@ -107,4 +90,3 @@ def __():
 
 if __name__ == "__main__":
     app.run()
-

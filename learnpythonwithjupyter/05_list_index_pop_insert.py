@@ -41,7 +41,7 @@ def __(mo):
 
 @app.cell
 def __(mo):
-    mo.md(r"1. Look at the position of the side dish in the menu:")
+    mo.md(r"1. 1. Look at the position of the side dish in the menu:")
     return
 
 

@@ -1,10 +1,10 @@
 import marimo
 
-__generated_with = "0.6.8"
+__generated_with = "0.6.10"
 app = marimo.App()
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(
         r"""
@@ -23,11 +23,7 @@ def __(mo):
 
 @app.cell
 def __(mo):
-    mo.md(
-        r"""
-        - Here are a list of my friends and a list of their favorite dishes: 
-        """
-    )
+    mo.md(r"- Here are a list of my friends and a list of their favorite dishes:")
     return
 
 
@@ -40,11 +36,7 @@ def __():
 
 @app.cell
 def __(mo):
-    mo.md(
-        r"""
-        - These are all my friends:
-        """
-    )
+    mo.md(r"- These are all my friends:")
     return
 
 
@@ -57,29 +49,21 @@ def __(friends):
 
 @app.cell
 def __(mo):
-    mo.md(
-        r"""
-        - These are my friends one by one:
-        """
-    )
+    mo.md(r"- These are my friends one by one:")
     return
 
 
 @app.cell
 def __(friends):
-    for index in range (0,4):
-        print ("index:  " + str(index))
-        print ("friend: " + friends[index])
-    return index,
+    for index2 in range (0,4):
+        print ("index:  " + str(index2))
+        print ("friend: " + friends[index2])
+    return index2,
 
 
 @app.cell
 def __(mo):
-    mo.md(
-        r"""
-        - These are all their favorite dishes:
-        """
-    )
+    mo.md(r"- These are all their favorite dishes:")
     return
 
 
@@ -92,29 +76,21 @@ def __(dishes):
 
 @app.cell
 def __(mo):
-    mo.md(
-        r"""
-        - These are their favorite dishes one by one:
-        """
-    )
+    mo.md(r"- These are their favorite dishes one by one:")
     return
 
 
 @app.cell
 def __(dishes):
-    for index in range (0,4):
-        print ("index:  " + str(index))
-        print ("dish: " + dishes[index])
-    return index,
+    for index3 in range (0,4):
+        print ("index:  " + str(index3))
+        print ("dish: " + dishes[index3])
+    return index3,
 
 
 @app.cell
 def __(mo):
-    mo.md(
-        r"""
-        - These are my friends, with their favorite dishes one by one:
-        """
-    )
+    mo.md(r"- These are my friends, with their favorite dishes one by one:")
     return
 
 
@@ -133,4 +109,3 @@ def __():
 
 if __name__ == "__main__":
     app.run()
-

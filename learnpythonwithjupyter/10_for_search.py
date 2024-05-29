@@ -1,10 +1,10 @@
 import marimo
 
-__generated_with = "0.6.8"
+__generated_with = "0.6.11"
 app = marimo.App()
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(
         r"""
@@ -21,13 +21,9 @@ def __(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
-    mo.md(
-        r"""
-        - Who doesn’t have a messy drawer? Here is ours! It contains some accessories:
-        """
-    )
+    mo.md(r"## Who doesn’t have a messy drawer? Here is ours! It contains some accessories:")
     return
 
 
@@ -38,13 +34,9 @@ def __():
     return accessories,
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
-    mo.md(
-        r"""
-        - Print out all accessories one by one, as well as their positions in the list. Use a sentence like *The element x is in position y*:  
-        """
-    )
+    mo.md(r"## Print out all accessories one by one, as well as their positions in the list. Use a sentence like *The element x is in position y*:")
     return
 
 
@@ -59,136 +51,112 @@ def __(accessories):
 
 @app.cell
 def __(mo):
-    mo.md(
-        r"""
-        1. Print the accessory whose name is **composed of** 6 characters and its position in the list. Use a sentence like *The element x is in position y and it has n characters*:
-        """
-    )
+    mo.md(r"## 1. Print the accessory whose name is **composed of** 6 characters and its position in the list. Use a sentence like *The element x is in position y and it has n characters*:")
     return
 
 
 @app.cell
 def __(accessories):
     # for each position in the list
-    for i in range (len(accessories)):
+    for _i in range (len(accessories)):
         # if the length of the element equals 6
-        if len(accessories[i]) == 6:
+        if len(accessories[_i]) == 6:
             # print the element, its position, and its number of characters
-            print ("The element " + accessories[i] + " is in position " + str(i) + " and it has 6 characters")
-    return i,
+            print ("The element " + accessories[_i] + " is in position " + str(_i) + " and it has 6 characters")
+    return
 
 
 @app.cell
 def __(mo):
-    mo.md(
-        r"""
-        2. Print the accessories whose names are composed of **less than** 6 characters:
-        """
-    )
+    mo.md(r"## 2. Print the accessories whose names are composed of **less than** 6 characters:")
     return
 
 
 @app.cell
 def __(accessories):
     # for each position in the list
-    for i in range (len(accessories)):
+    for _i in range (len(accessories)):
         # if the length of the element is less than 6
-        if len(accessories[i]) < 6:
+        if len(accessories[_i]) < 6:
             # print the element, its position, and its number of characters
-            print ("The element " + accessories[i] + " is in position " + str(i) + " and it has less than 6 characters")  
-    return i,
+            print ("The element " + accessories[_i] + " is in position " + str(_i) + " and it has less than 6 characters")
+    return
 
 
 @app.cell
 def __(mo):
-    mo.md(
-        r"""
-        3. Print the accessories whose name is composed of **more than** 6 characters. Also, assign 6 to a variable:
-        """
-    )
+    mo.md(r"## 3. Print the accessories whose name is composed of **more than** 6 characters. Also, assign 6 to a variable:")
     return
 
 
 @app.cell
 def __(accessories):
     # defining the threshold
-    n_of_characters = 6 
+    n_of_characters2 = 6 
     # for each position in the list 
-    for i in range (len(accessories)):
+    for i4 in range (len(accessories)):
         # if the length of the element is greater than the threshold
-        if len(accessories[i]) > n_of_characters:
+        if len(accessories[i4]) > n_of_characters2:
             # print the element, its position, and its number of characters
-            print ("The element " + accessories[i] + " is in position " + str(i) + " and it has more than " + str(n_of_characters) + " characters")
-    return i, n_of_characters
+            print ("The element " + accessories[i4] + " is in position " + str(i4) + " and it has more than " + str(n_of_characters2) + " characters")
+    return i4, n_of_characters2
 
 
 @app.cell
 def __(mo):
-    mo.md(
-        r"""
-        4. Print the accessories whose names are composed of a number of characters **different from** 6:
-        """
-    )
+    mo.md(r"## 4. Print the accessories whose names are composed of a number of characters **different from** 6:")
     return
 
 
 @app.cell
 def __(accessories):
     # defining the threshold
-    n_of_characters = 6 
+    n_of_characters3 = 6 
     # for each position in the list 
-    for i in range (len(accessories)):
+    for i5 in range (len(accessories)):
         # if the length of the element is not equal to the threshold
-        if len(accessories[i]) != n_of_characters:
+        if len(accessories[i5]) != n_of_characters3:
             # print the element, its position, and its number of characters
-            print ("The element " + accessories[i] + " is in position " + str(i) + " and it has a number of characters different from " + str(n_of_characters))
-    return i, n_of_characters
+            print ("The element " + accessories[i5] + " is in position " + str(i5) + " and it has a number of characters different from " + str(n_of_characters3))
+    return i5, n_of_characters3
 
 
 @app.cell
 def __(mo):
-    mo.md(
-        r"""
-        5. Print the accessories whose position is **less than or equal to** 2:
-        """
-    )
+    mo.md(r"## 5. Print the accessories whose position is **less than or equal to** 2:")
     return
 
 
 @app.cell
 def __(accessories):
     # defining the threshold
-    position = 2 
+    position2 = 2 
     # for each position in the list 
-    for i in range (len(accessories)):
+    for i6 in range (len(accessories)):
         # if the position of the element is less then or equal to to the threshold
-        if i <= position:
+        if i6 <= position2:
             # print the element, its position, and its position characteristic
-            print ("The element " + accessories[i] + " is in position " + str(i) + ", which is less than or equal to " + str(position))
-    return i, position
+            print ("The element " + accessories[i6] + " is in position " + str(i6) + ", which is less than or equal to " + str(position2))
+    return i6, position2
 
 
 @app.cell
 def __(mo):
-    mo.md(
-        r"""
-        6. Print the accessories whose position is **at least** 2:
-        """
-    )
+    mo.md(r"## 6. Print the accessories whose position is **at least** 2:")
     return
 
 
 @app.cell
 def __(accessories):
     # defining the threshold
-    position = 2 
+    position3 = 2 
     # for each position in the list 
-    for i in range (len(accessories)):
+    for i7 in range (len(accessories)):
         # if the position of the element is greater then or equal to to the threshold
-        if i >= position:
+        if i7 >= position3:
             # print the element, its position, and its position characteristic
-            print ("The element " + accessories[i] + " is in position " + str(i) + ", which is at least " + str(position))
-    return i, position
+            print ("The element " + accessories[i7] + " is in position " + str(i7) + ", which is at least " + str(position3))
+    return i7, position3
 
 
 @app.cell
@@ -199,4 +167,3 @@ def __():
 
 if __name__ == "__main__":
     app.run()
-
