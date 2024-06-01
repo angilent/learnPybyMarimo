@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.6.8"
+__generated_with = "0.6.11"
 app = marimo.App()
 
 
@@ -28,6 +28,29 @@ def __(mo):
 
 @app.cell
 def __():
+    number = 23
+    guess = int(input('Enter an integer : '))
+
+    if guess == number:
+        # 新程序块的开始处
+        print('Congratulations, you guessed it.')
+        print('(but you do not win any prizes!)')
+        # 新程序块的结尾处
+    elif guess < number:
+        # 另一个程序块
+        print('No, it is a little higher than that')
+        # 你可以在程序块中“为所欲为”——做任何你想做的事情
+    else:
+        print('No, it is a little lower than that')
+        # 只有当猜测数大于给定数的时候，才会执行此处
+
+    print('Done')
+    # 在 if 语句执行结束后，最后的这句语句总是会被执行。
+    return guess, number
+
+
+@app.cell
+def __():
     1 + 1
     a = 1
     b = 2
@@ -48,7 +71,7 @@ def __():
     return
 
 
-@app.cell
+@app.cell(disabled=True)
 def __():
     input("what is you name")
     return
