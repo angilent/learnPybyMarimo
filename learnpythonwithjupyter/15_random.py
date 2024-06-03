@@ -24,11 +24,7 @@ def __(mo):
 
 @app.cell
 def __(mo):
-    mo.md(
-        r"""
-        - You are at a Chinese restaurant, and at the end of the meal, you get a fortune cookie. There are only three fortune cookies left. Each of them contains a message:
-        """
-    )
+    mo.md(r"- You are at a Chinese restaurant, and at the end of the meal, you get a fortune cookie. There are only three fortune cookies left. Each of them contains a message:")
     return
 
 
@@ -42,11 +38,7 @@ def __():
 
 @app.cell
 def __(mo):
-    mo.md(
-        r"""
-        - Which fortune cookie will you get? Let the computer decide! To do so, the computer needs a module called random: 
-        """
-    )
+    mo.md(r"- Which fortune cookie will you get? Let the computer decide! To do so, the computer needs a module called random:")
     return
 
 
@@ -58,11 +50,7 @@ def __():
 
 @app.cell
 def __(mo):
-    mo.md(
-        r"""
-        - Here is your message when the computer picks a message index:
-        """
-    )
+    mo.md(r"- Here is your message when the computer picks a message index:")
     return
 
 
@@ -80,11 +68,7 @@ def __(fortune_cookies, random):
 
 @app.cell
 def __(mo):
-    mo.md(
-        r"""
-        - And here is your message when the computer directly picks a message:
-        """
-    )
+    mo.md(r"- And here is your message when the computer directly picks a message:")
     return
 
 
@@ -104,4 +88,3 @@ def __():
 
 if __name__ == "__main__":
     app.run()
-

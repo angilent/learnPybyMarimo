@@ -129,7 +129,7 @@ def __(mo):
         ## 如何编写程序？
 
         ```python
-        print("Hello, world!")
+        print("Hello, world!3434")
         print("My name's Beej and this is (possibly) my first program!")
         ```
         """
@@ -190,7 +190,7 @@ def __():
 def __():
     import math
 
-    _x = math.sqrt(2)
+    _x = math.sqrt(6)
     print(_x)
     return math,
 
@@ -255,18 +255,37 @@ def __():
 
 
 @app.cell
+def __():
+    1 + 3
+    print('hello world')
+    return
+
+
+@app.cell
 def __(mo):
-    slider = mo.ui.slider(1,20)
+    mo.md(
+        rf"""
+        ## showtime
+        1. 开始
+        2. 据说
+        """
+    )
+    return
+
+
+@app.cell
+def __(mo):
+    slider = mo.ui.slider(1,30)
     return slider,
 
 
-@app.cell(hide_code=True)
+@app.cell
 def __(mo, slider):
     mo.md(rf"{slider}")
     return
 
 
-@app.cell(hide_code=True)
+@app.cell
 def __(x):
     for row in range(1, x + 1):
         for product in range(row, row * (x + 1), row):
@@ -275,9 +294,10 @@ def __(x):
     return product, row
 
 
-@app.cell(hide_code=True)
+@app.cell
 def __(slider):
     x = slider.value
+    x
     print(x)
     if x < 10:
         print("x is less than 10")

@@ -61,7 +61,7 @@ def __(mo):
 def __(first_name, last_name):
     print ("first name is:" + first_name)
     print (last_name)
-
+    (first_name,last_name)
     return
 
 
@@ -77,14 +77,28 @@ def __(mo):
 
 
 @app.cell
-def __():
-    name = input("What's your name?")
+def __(mo):
+    text_input_name = mo.ui.text()
+    mo.md(f"What's your name? {text_input_name}")
+    return text_input_name,
+
+
+@app.cell
+def __(text_input_name):
+    name = text_input_name.value
     return name,
 
 
 @app.cell
-def __():
-    favorite_food = input ("What is your favorite food?")
+def __(mo):
+    text_input_food = mo.ui.text()
+    mo.md(f"What's your favorite food? {text_input_food}")
+    return text_input_food,
+
+
+@app.cell
+def __(text_input_food):
+    favorite_food = text_input_food.value
     return favorite_food,
 
 
@@ -93,6 +107,17 @@ def __(favorite_food, name):
     print ("Hi! My name is " + name)
     print ("My favorite food is " + favorite_food) 
     print (name + "'s favorite food is " + favorite_food)
+    return
+
+
+@app.cell
+def __(favorite_food, mo, name):
+    mo.md(
+        f"""
+        Hi! My name is {name} \n
+        My favorite food is {favorite_food} \n
+        """  
+    ).callout()
     return
 
 

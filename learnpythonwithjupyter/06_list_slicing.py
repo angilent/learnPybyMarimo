@@ -35,6 +35,7 @@ def __(mo):
 def __():
     cities = ["San Diego", "Prague", "Cape Town", "Tokyo", "Melbourne"]
     print (cities)
+    cities
     return cities,
 
 
@@ -191,6 +192,12 @@ def __(mo):
 @app.cell
 def __(cities):
     print (cities[::-1])
+    return
+
+
+@app.cell
+def __(cities, mo):
+    mo.md(f"{cities[::-1]}").callout()
     return
 
 

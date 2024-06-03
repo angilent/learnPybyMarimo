@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.6.8"
+__generated_with = "0.6.11"
 app = marimo.App()
 
 
@@ -62,12 +62,44 @@ def __(mo):
 
 
 @app.cell
+def __(mo):
+    text_input = mo.ui.text()
+    mo.md(f"What's your namme: {text_input}")
+    return text_input,
+
+
+@app.cell
+def __(text_input):
+    text_input
+    return
+
+
+@app.cell
+def __(text_input):
+    text_input.value
+    return
+
+
+@app.cell(disabled=True)
 def __():
     input("What's your name?")
     return
 
 
 @app.cell
+def __(mo):
+    text_input2  = mo.ui.text()
+    mo.md(f"Where are you from : {text_input2}")
+    return text_input2,
+
+
+@app.cell
+def __(text_input2):
+    text_input2.value
+    return
+
+
+@app.cell(disabled=True)
 def __():
     input("Where are you from?")
     return
@@ -81,17 +113,42 @@ def __(mo):
 
 @app.cell
 def __(mo):
+    text_input_name2 = mo.ui.text(placeholder="Your name here")
+    text_input_name2
+    return text_input_name2,
+
+
+@app.cell
+def __(mo):
+    text_input_email = mo.ui.text(placeholder="Your email",kind="email")
+    text_input_email
+    return text_input_email,
+
+
+@app.cell
+def __(text_input_name2):
+    text_input_name2.value
+    return
+
+
+@app.cell
+def __():
+    return
+
+
+@app.cell
+def __(mo):
     mo.md(r"- Look at the following example and run the cells:")
     return
 
 
 @app.cell
 def __():
-    print (" /\_/\   ")
+    print (" /\_/\  ooo ")
     print (" >^.^<   ")
     print ("  / \    ")
     print (" (___)___")
-    print(111)
+
     return
 
 
